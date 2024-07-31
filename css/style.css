@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.top {
+  position: relative;
+  height: 50%;
+  background-color: rgb(54, 14, 4);
+  animation-name: top;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 1;
+}
+
+.bottom {
+  position: relative;
+  height: 50%;
+  background-color: rgb(10, 12, 79);
+  animation-name: bottom;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 3;
+}
+
+.sun {
+  position: absolute;
+  top: 20px;
+  right: 700px;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: rgb(180, 180, 0);
+  box-shadow: 0 0 20px 5px yellow;
+  animation-name: sun;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ship {
+  width: 0;
+  height: 0;
+  z-index: 3;
+  position: absolute;
+  bottom: 100px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 90px solid #000;
+  animation-name: ship;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sun {
+  0% {
+    top: 400px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
+
+@keyframes top {
+  0% {
+    background-color: rgb(72, 0, 0);
+  }
+
+  10% {
+    background-color: rgb(89, 7, 7);
+  }
+
+  25% {
+    background-color: rgb(107, 2, 2);
+  }
+
+  50% {
+    background-color: rgb(117, 40, 20);
+  }
+
+  75% {
+    background-color: rgb(173, 57, 29);
+  }
+
+  100% {
+    background-color: rgb(184, 62, 31);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    background-color: rgb(10, 12, 79);
+  }
+
+  10% {
+    background-color: rgb(20, 23, 120);
+  }
+
+  25% {
+    background-color: rgb(30, 34, 155);
+  }
+
+  50% {
+    background-color: rgb(40, 47, 225);
+  }
+
+  75% {
+    background-color: rgb(30, 35, 208);
+  }
+
+  100% {
+    background-color: rgb(33, 40, 245);
+  }
+}
+
+@keyframes ship {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: calc(100% - 50px);
+  }
+  100% {
+    right: 0;
+  }
+}
